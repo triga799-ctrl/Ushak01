@@ -1,0 +1,88 @@
+.organization-workspace {
+  max-width: 1120px;
+}
+
+.organization-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.organization-form section {
+  padding: 19px 20px;
+  border: 1px solid #dfe7f0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.organization-form h2 {
+  margin: 0 0 16px;
+  color: #203b5e;
+  font-size: 15px;
+}
+
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.organization-grid label {
+  display: grid;
+  gap: 6px;
+  color: #586a82;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.organization-grid .wide-field {
+  grid-column: span 2;
+}
+
+.organization-grid input {
+  min-width: 0;
+  height: 38px;
+  border: 1px solid #cfdbe9;
+  border-radius: 6px;
+  padding: 0 10px;
+  color: #263c59;
+  font: inherit;
+  font-weight: 500;
+  outline-color: #1769e8;
+}
+
+.organization-grid input::placeholder {
+  color: #97a5b6;
+}
+
+.organization-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.organization-actions p {
+  margin: 0;
+  color: #168453;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .organization-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .organization-form section {
+    padding: 15px;
+  }
+
+  .organization-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .organization-grid .wide-field {
+    grid-column: auto;
+  }
+}

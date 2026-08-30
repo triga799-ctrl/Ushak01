@@ -1,0 +1,154 @@
+.document-editor-screen {
+  max-width: 1120px;
+}
+
+.document-actions-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.document-actions-toolbar button {
+  padding: 9px 11px;
+  font-size: 11px;
+}
+
+.document-card {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.document-card > section {
+  padding: 19px 20px;
+  border: 1px solid #dfe7f0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.document-card h2 {
+  margin: 0 0 15px;
+  color: #243e5f;
+  font-size: 15px;
+}
+
+.document-card section > p {
+  margin: -7px 0 13px;
+  color: #75869b;
+  font-size: 11px;
+}
+
+.document-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.document-card-grid label {
+  display: grid;
+  gap: 6px;
+  color: #586a82;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.document-card-grid .document-card-wide {
+  grid-column: span 3;
+}
+
+.document-card-grid input,
+.document-card-grid select {
+  min-width: 0;
+  height: 38px;
+  border: 1px solid #cfdbe9;
+  border-radius: 6px;
+  padding: 0 10px;
+  background: #fff;
+  color: #263c59;
+  font: inherit;
+  font-weight: 500;
+  outline-color: #1769e8;
+}
+
+.document-card-grid input:disabled {
+  background: #f4f7fb;
+  color: #72829a;
+}
+
+.document-upload {
+  display: inline-flex;
+  align-items: center;
+  border: 1px dashed #a9c5eb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #1769e8;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.document-upload:hover {
+  background: #f2f8ff;
+}
+
+.document-upload input {
+  display: none;
+}
+
+.document-upload-hint {
+  display: block;
+  margin-top: 9px;
+  color: #8b99aa;
+  font-size: 10px;
+}
+
+.document-selected-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 11px;
+  padding: 9px 10px;
+  border: 1px solid #dbe6f2;
+  border-radius: 6px;
+  color: #40536f;
+  font-size: 11px;
+}
+
+.document-selected-file > span {
+  color: #1769e8;
+}
+
+.document-selected-file small {
+  flex: 1;
+  color: #8291a6;
+}
+
+.document-selected-file button {
+  border: 0;
+  background: transparent;
+  color: #c7433a;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.document-card footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.document-card footer p {
+  margin: 0;
+  color: #c7433a;
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .document-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .document-card-grid .document-card-wide {
+    grid-column: auto;
+  }
+}

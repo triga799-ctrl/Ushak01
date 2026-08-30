@@ -18,9 +18,20 @@ export const seedTasks = [
 ];
 
 export const seedDirectories = {
-  'Подразделения': [{ name: 'Администрация', code: 'ADM', owner: 'Иванов И. И.' }, { name: 'Отдел цифровизации', code: 'DCG', owner: 'Смирнов А. П.' }, { name: 'Юридический отдел', code: 'LAW', owner: 'Петрова М. С.' }],
+  'Сотрудники': [{ name: 'Иванов И. И.', code: '1', owner: 'Администрация' }, { name: 'Смирнов А. П.', code: '2', owner: 'Проектный офис' }, { name: 'Петрова М. С.', code: '3', owner: 'Юридический отдел' }, { name: 'Кузнецов И. В.', code: '4', owner: 'ИТ-отдел' }, { name: 'Волкова О. Н.', code: '5', owner: 'Финансовый отдел' }],
+  'Подразделения': [{ name: 'Администрация', code: 'ADM', owner: 'Иванов И. И.' }, { name: 'Проектный офис', code: 'PMO', owner: 'Смирнов А. П.' }, { name: 'Юридический отдел', code: 'LAW', owner: 'Петрова М. С.' }, { name: 'ИТ-отдел', code: 'IT', owner: 'Кузнецов И. В.' }, { name: 'Финансовый отдел', code: 'FIN', owner: 'Волкова О. Н.' }],
   'Контрагенты': [{ name: 'ООО «Альфа»', code: '7701234567', owner: 'Действующий' }, { name: 'АО «Север»', code: '7807654321', owner: 'Действующий' }, { name: 'ООО «Вектор»', code: '6603109876', owner: 'На проверке' }],
   'Роли и права': [{ name: 'Администратор', code: 'ADMIN', owner: 'Полный доступ' }, { name: 'Руководитель', code: 'MANAGER', owner: 'Работа с задачами и документами' }, { name: 'Специалист', code: 'SPECIALIST', owner: 'Исполнение задач' }],
+};
+
+export const seedDirectoryFields = {
+  'Сотрудники': [
+    { id: 'code', name: 'Код', type: 'числовой' },
+    { id: 'name', name: 'Фамилия', type: 'текстовый' },
+    { id: 'firstName', name: 'Имя', type: 'текстовый' },
+    { id: 'middleName', name: 'Отчество', type: 'текстовый' },
+    { id: 'department', name: 'Подразделение', type: 'справочник', directory: 'Подразделения' },
+  ],
 };
 
 export const seedDocuments = [
