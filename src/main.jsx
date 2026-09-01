@@ -7,6 +7,8 @@ import './organization.css';
 import './chat.css';
 import './document-card.css';
 import './reports.css';
+import './corporate.css';
+import './enhancements.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
