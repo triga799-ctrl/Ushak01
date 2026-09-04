@@ -13,6 +13,14 @@
   background: #fff;
 }
 
+.chat-layout.unified {
+  display: block;
+}
+
+.chat-layout.unified .chat-dialog {
+  min-height: 570px;
+}
+
 .chat-contacts {
   border-right: 1px solid #dfe7f0;
   background: #fbfcfe;
@@ -77,34 +85,57 @@
   border-bottom: 1px solid #e5ebf3;
 }
 
+.chat-dialog .chat-feed-header {
+  justify-content: space-between;
+  padding: 10px 16px;
+}
+
+.chat-recipient {
+  display: grid;
+  gap: 3px;
+  color: #60728a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chat-recipient select {
+  min-width: 190px;
+  height: 30px;
+  border: 1px solid #cfdbe9;
+  border-radius: 6px;
+  padding: 0 8px;
+  background: #fff;
+  color: #2d425d;
+}
+
 .chat-dialog h2 {
   margin: 0;
   color: #263e5c;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .chat-dialog header p {
   margin: 3px 0 0;
-  color: #7b8aa0;
-  font-size: 10px;
+  color: #4e6684;
+  font-size: 13px;
 }
 
 .chat-messages {
   display: flex;
   min-height: 0;
   flex-direction: column;
-  gap: 9px;
+  gap: 5px;
   overflow-y: auto;
-  padding: 18px 20px;
+  padding: 10px 16px;
   background: #f7faff;
 }
 
 .chat-message {
   align-self: flex-start;
-  max-width: min(74%, 470px);
+  max-width: min(88%, 760px);
   border: 1px solid #dce5f0;
   border-radius: 9px 9px 9px 2px;
-  padding: 9px 11px 6px;
+  padding: 6px 9px;
   background: #fff;
 }
 
@@ -119,11 +150,25 @@
 .chat-message p {
   margin: 0;
   overflow-wrap: anywhere;
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
-.chat-message time {
+.chat-message > header {
+  display: flex;
+  gap: 7px;
+  align-items: baseline;
+  padding: 0 0 3px;
+  border: 0;
+  color: #526982;
+  font-size: 11px;
+}
+
+.chat-message > header strong { color: #16385f; font-size: 13px; }
+.chat-message > header time { margin-left: auto; color: #526b89; font-size: 11px; }
+.chat-message.own > header, .chat-message.own > header strong, .chat-message.own > header time { color: #dcecff; }
+
+.chat-message > time {
   display: block;
   margin-top: 4px;
   color: #8291a6;
@@ -144,24 +189,25 @@
 
 .chat-compose {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 9px;
-  padding: 14px 16px;
+  grid-template-columns: auto 190px minmax(0, 1fr) auto;
+  gap: 7px;
+  padding: 9px 12px;
   border-top: 1px solid #e5ebf3;
 }
 
 .chat-compose input {
   min-width: 0;
-  height: 38px;
-  border: 1px solid #cfdbe9;
+  height: 34px;
+  border: 1px solid #aebfd5;
   border-radius: 6px;
   padding: 0 11px;
-  color: #2d425d;
+  color: #203b5c;
+  font-size: 14px;
   outline-color: #1769e8;
 }
 
 .chat-compose .primary-button {
-  padding: 0 15px;
+  padding: 0 13px;
 }
 
 .chat-file-input {
@@ -175,8 +221,8 @@
 }
 
 .chat-attach-button {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: 1px solid #cfdbe9;
   border-radius: 6px;
   background: #fff;
@@ -184,6 +230,11 @@
   cursor: pointer;
   font-size: 16px;
 }
+
+.chat-recipient { align-content: center; }
+.chat-recipient select { min-width: 0; height: 34px; }
+.chat-recipient { color:#405b7d; font-size:12px; }
+.chat-recipient select { border-color:#aebfd5; color:#203b5c; font-size:14px; }
 
 .chat-attach-button:hover {
   border-color: #1c6dea;
@@ -277,6 +328,26 @@
   font-size: 9px;
 }
 
+.chat-attachment-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.chat-attachment-actions button,
+.chat-attachment-actions a {
+  border: 1px solid #c8d9ef;
+  border-radius: 4px;
+  padding: 4px 6px;
+  background: #fff;
+  color: #285b9f;
+  font-size: 9px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .chat-message.own .chat-attachment {
   border-color: #87b6ff;
   background: #f8fbff;
@@ -287,6 +358,11 @@
   .chat-layout {
     grid-template-columns: 1fr;
   }
+
+  .chat-layout.unified .chat-dialog { min-height: 610px; }
+  .chat-dialog .chat-feed-header { align-items: flex-start; gap: 8px; }
+  .chat-compose { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .chat-recipient { grid-column: 1 / -1; }
 
   .chat-contacts {
     display: flex;

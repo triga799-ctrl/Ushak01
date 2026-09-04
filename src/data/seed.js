@@ -1,9 +1,16 @@
 export const users = [
-  { id: 'u1', name: 'Иванов И. И.', initials: 'ИИ', role: 'Администратор', department: 'Администрация', color: '#1c5cbf', login: 'admin', password: 'admin123' },
-  { id: 'u2', name: 'Смирнов А. П.', initials: 'СП', role: 'Руководитель', department: 'Проектный офис', color: '#c06b3e', login: 'smirnov', password: 'project123' },
-  { id: 'u3', name: 'Петрова М. С.', initials: 'ПМ', role: 'Постановщик', department: 'Юридический отдел', color: '#8a4fb4', login: 'petrova', password: 'user123' },
-  { id: 'u4', name: 'Кузнецов И. В.', initials: 'КИ', role: 'Исполнитель', department: 'ИТ-отдел', color: '#16856e', login: 'kuznetsov', password: 'user123' },
-  { id: 'u5', name: 'Волкова О. Н.', initials: 'ВО', role: 'Наблюдатель', department: 'Финансовый отдел', color: '#b25173', login: 'volkova', password: 'user123' },
+  { id: 'u1', name: 'Иванов И. И.', initials: 'ИИ', role: 'Администратор', department: 'Администрация', color: '#1c5cbf', login: 'admin', password: '123' },
+  { id: 'u2', name: 'Смирнов А. П.', initials: 'СП', role: 'Руководитель', department: 'Проектный офис', color: '#c06b3e', login: 'smirnov', password: '123' },
+  { id: 'u3', name: 'Петрова М. С.', initials: 'ПМ', role: 'Постановщик', department: 'Юридический отдел', color: '#8a4fb4', login: 'petrova', password: '123' },
+  { id: 'u4', name: 'Кузнецов И. В.', initials: 'КИ', role: 'Исполнитель', department: 'ИТ-отдел', color: '#16856e', login: 'kuznetsov', password: '123' },
+  { id: 'u5', name: 'Волкова О. Н.', initials: 'ВО', role: 'Наблюдатель', department: 'Финансовый отдел', color: '#b25173', login: 'volkova', password: '123' },
+  { id: 'u-secretary', name: 'Секретарь', initials: 'С', role: 'Администратор', department: 'Администрация', color: '#5b6f96', login: 'secretary', password: '123' },
+  { id: 'u-director', name: 'Директор', initials: 'Д', role: 'Постановщик', department: 'Руководители подразделений', color: '#1c5cbf', login: 'director', password: '123' },
+  { id: 'u-security', name: 'Безопасность', initials: 'Б', role: 'Постановщик', department: 'Руководители подразделений', color: '#8a4fb4', login: 'security', password: '123' },
+  { id: 'u-hrr', name: 'HRR', initials: 'HR', role: 'Постановщик', department: 'Руководители подразделений', color: '#16856e', login: 'hrr', password: '123' },
+  { id: 'u-deputy-study', name: 'Завуч по учебной работе', initials: 'ЗУ', role: 'Постановщик', department: 'Руководители подразделений', color: '#c06b3e', login: 'deputy-study', password: '123' },
+  { id: 'u-deputy-education', name: 'Завуч по воспитательной работе', initials: 'ЗВ', role: 'Постановщик', department: 'Руководители подразделений', color: '#b25173', login: 'deputy-education', password: '123' },
+  { id: 'u-khimigol', name: 'Химиголь', initials: 'Х', role: 'Постановщик', department: 'Руководители подразделений', color: '#4d72a8', login: 'khimigol', password: '123' },
 ];
 
 export const seedTasks = [
@@ -19,12 +26,33 @@ export const seedTasks = [
 
 export const seedDirectories = {
   'Сотрудники': [{ name: 'Иванов И. И.', code: '1', owner: 'Администрация' }, { name: 'Смирнов А. П.', code: '2', owner: 'Проектный офис' }, { name: 'Петрова М. С.', code: '3', owner: 'Юридический отдел' }, { name: 'Кузнецов И. В.', code: '4', owner: 'ИТ-отдел' }, { name: 'Волкова О. Н.', code: '5', owner: 'Финансовый отдел' }],
-  'Подразделения': [{ name: 'Администрация', code: 'ADM', owner: 'Иванов И. И.' }, { name: 'Проектный офис', code: 'PMO', owner: 'Смирнов А. П.' }, { name: 'Юридический отдел', code: 'LAW', owner: 'Петрова М. С.' }, { name: 'ИТ-отдел', code: 'IT', owner: 'Кузнецов И. В.' }, { name: 'Финансовый отдел', code: 'FIN', owner: 'Волкова О. Н.' }],
-  'Контрагенты': [{ name: 'ООО «Альфа»', code: '7701234567', owner: 'Действующий' }, { name: 'АО «Север»', code: '7807654321', owner: 'Действующий' }, { name: 'ООО «Вектор»', code: '6603109876', owner: 'На проверке' }],
+  'Подразделения': [{ name: 'Администрация', code: 'ADM', owner: 'Иванов И. И.' }, { name: 'Проектный офис', code: 'PMO', owner: 'Смирнов А. П.' }, { name: 'Юридический отдел', code: 'LAW', owner: 'Петрова М. С.' }, { name: 'ИТ-отдел', code: 'IT', owner: 'Кузнецов И. В.' }, { name: 'Финансовый отдел', code: 'FIN', owner: 'Волкова О. Н.' }, { name: 'Руководители подразделений', code: 'HEADS', owner: '' }],
+  'Контрагенты': [
+    { name: 'ООО «Альфа»', code: '1', inn: '7701234567', kpp: '770101001', bankDetails: 'ПАО «Банк», БИК 044525225, р/с 40702810000000000001', address: 'г. Москва, ул. Тверская, д. 1', responsibleLastName: 'Петров', phone: '+7 (495) 123-45-67', email: 'info@alfa.example', status: 'Действующий' },
+    { name: 'АО «Север»', code: '2', inn: '7807654321', kpp: '780701001', bankDetails: 'АО «Банк», БИК 044525593, р/с 40702810100000000002', address: 'г. Санкт-Петербург, Невский проспект, д. 10', responsibleLastName: 'Соколова', phone: '+7 (812) 123-45-67', email: 'office@sever.example', status: 'Действующий' },
+    { name: 'ООО «Вектор»', code: '3', inn: '6603109876', kpp: '660301001', bankDetails: 'ПАО «Банк», БИК 046577964, р/с 40702810200000000003', address: 'г. Екатеринбург, проспект Ленина, д. 25', responsibleLastName: 'Кузнецов', phone: '+7 (343) 123-45-67', email: 'contact@vector.example', status: 'На проверке' },
+  ],
   'Роли и права': [{ name: 'Администратор', code: 'ADMIN', owner: 'Полный доступ' }, { name: 'Руководитель', code: 'MANAGER', owner: 'Работа с задачами и документами' }, { name: 'Специалист', code: 'SPECIALIST', owner: 'Исполнение задач' }],
+  'Группировка документов': [{ name: 'Безопасность', code: '1' }, { name: 'Учебная работа', code: '2' }, { name: 'Воспитательная работа', code: '3' }, { name: 'Делопроизводство', code: '4' }],
 };
 
 export const seedDirectoryFields = {
+  'Контрагенты': [
+    { id: 'code', name: 'Код', type: 'числовой' },
+    { id: 'name', name: 'Наименование', type: 'текстовый' },
+    { id: 'inn', name: 'ИНН', type: 'текстовый' },
+    { id: 'kpp', name: 'КПП', type: 'текстовый' },
+    { id: 'bankDetails', name: 'Банковские реквизиты', type: 'текстовый' },
+    { id: 'address', name: 'Адрес', type: 'текстовый' },
+    { id: 'responsibleLastName', name: 'Фамилия ответственного лица', type: 'текстовый' },
+    { id: 'phone', name: 'Телефон', type: 'телефон' },
+    { id: 'email', name: 'Электронная почта', type: 'текстовый' },
+    { id: 'status', name: 'Статус', type: 'текстовый' },
+  ],
+  'Группировка документов': [
+    { id: 'code', name: 'Код', type: 'числовой' },
+    { id: 'name', name: 'Наименование', type: 'текстовый' },
+  ],
   'Сотрудники': [
     { id: 'code', name: 'Код', type: 'числовой' },
     { id: 'name', name: 'Фамилия', type: 'текстовый' },

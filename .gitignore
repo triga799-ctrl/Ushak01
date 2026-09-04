@@ -1,4 +1,9 @@
 node_modules/
+.pnpm-store/
 dist/
 .vite/
 *.log
+.env
+.env.*
+!.env.server.example
+!server/.env.example

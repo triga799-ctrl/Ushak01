@@ -19,6 +19,10 @@ Commands should be runnable from the repository root and should match the script
 
 Use the formatter and linter selected by the project; committed code should pass both before review. Prefer four-space indentation unless the language ecosystem or existing formatter specifies otherwise, keep functions and modules focused, and avoid unnecessary abstractions. Use `PascalCase` for types and components, `camelCase` for variables and functions, and `kebab-case` for new directory or asset names unless the language requires a different convention. Keep filenames consistent with their exported symbol or primary responsibility.
 
+## UI Interaction Convention
+
+For file actions, use icon-only controls for preview and download across every screen. Each icon must retain an explicit Russian `aria-label` and `title` (for example, «Просмотреть файл» or «Скачать файл») so the action remains clear with a mouse, keyboard, and screen reader. Apply this convention to all new file-related interfaces.
+
 ## Testing Guidelines
 
 Add tests for new behavior and regressions. Test files should use the project’s established pattern (for example, `*.test.ts` or `test_*.py`) and describe observable behavior rather than implementation details. Run the full suite locally before submitting changes; maintain the coverage threshold once one is configured.
